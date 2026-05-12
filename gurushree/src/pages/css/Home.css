@@ -1,19 +1,15 @@
 .hero-section {
-  padding: 180px 0 120px;
-background: url(/gurushree/Image/bannerbg.jpg);
+  padding: 200px 0 100px;
+  min-height: 80vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-
 }
 
 .hero-title {
   font-size: 50px;
   font-weight: 800;
   line-height: 1.1;
-
-
-
   margin-bottom: 25px;
 }
 
@@ -23,48 +19,9 @@ background: url(/gurushree/Image/bannerbg.jpg);
   margin-bottom: 40px;
 }
 
-.hero-image-container {
-  position: relative;
-}
-
-.hero-image-container::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle, var(--primary-glow), transparent 70%);
-  z-index: -1;
-  filter: blur(50px);
-  opacity: 0.3;
-}
-
-.hero-img {
-  width: 100%;
-  max-width: 600px;
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.1));
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
 @media (max-width: 991px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 3rem !important;
   }
 }
 
