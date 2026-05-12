@@ -2,23 +2,50 @@
   margin-top: 100px;
 }
 
-.speciality-item {
-  background: white;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+.specialities-list::-webkit-scrollbar {
+  width: 6px;
+}
+.specialities-list::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+.specialities-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1; 
+  border-radius: 10px;
+}
+.specialities-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; 
+}
+
+.spec-tab {
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.speciality-item:hover {
-  border-color: #2563eb;
-  transform: translateX(8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+.spec-tab:hover:not(.active) {
+  background-color: #f8fafc;
+  color: #2563eb !important;
+  padding-left: 2rem !important;
 }
 
-.speciality-icon {
-  transition: transform 0.3s ease;
+.spec-tab.active {
+  background-color: #2563eb !important;
+  color: white !important;
+  transform: scale(1.02);
+  z-index: 1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.speciality-item:hover .speciality-icon {
-  transform: scale(1.2);
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
