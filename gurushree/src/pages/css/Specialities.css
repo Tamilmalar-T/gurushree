@@ -1,0 +1,24 @@
+.specialities-page {
+  margin-top: 100px;
+}
+
+.speciality-item {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.speciality-item:hover {
+  border-color: #2563eb;
+  transform: translateX(8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.speciality-icon {
+  transition: transform 0.3s ease;
+}
+
+.speciality-item:hover .speciality-icon {
+  transform: scale(1.2);
+}
