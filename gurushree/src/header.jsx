@@ -21,10 +21,10 @@ const Header = () => {
           <div className="row align-items-center">
             <div className="col-md-8 d-flex align-items-center">
               <div className="me-4 d-flex align-items-center">
-                <FaMapMarkerAlt className="me-2" /> 121 King St, Melbourne, VIC 3000
+                <FaMapMarkerAlt className="me-2" />chandra layout, 1st cross, 1st main, near BDA complex, Bangalore - 560086
               </div>
               <div className="d-flex align-items-center">
-                <FaPhone className="me-2" /> (800)-569-7890
+                <FaPhone className="me-2" /> (800)-123-1234
               </div>
             </div>
             <div className="col-md-4 d-flex justify-content-end align-items-center">

@@ -4,38 +4,67 @@ import './css/About.css'
 const About = () => {
   return (
     <div className="py-5 about-page">
-      <div className="container py-5">
-        <div className="row align-items-center">
-          <div className="col-lg-6">
-            <h1 className="fw-bold mb-4">About Gurushree Medical</h1>
-            <p className="lead text-muted mb-4">
-              Providing exceptional healthcare services since 2010. Our mission is to provide high-quality, compassionate, and accessible healthcare.
-            </p>
-            <p className="mb-4">
-              Gurushree Medical has been a cornerstone of the community, offering a wide range of medical services from diagnostics to surgery. Our state-of-the-art facility is designed to provide a comfortable and healing environment for our patients.
-            </p>
-            <div className="row g-4 mt-2">
-              <div className="col-6">
-                <div className="d-flex align-items-center">
-                  <div className="vision-mission-icon me-3">🎯</div>
-                  <div>
-                    <h6 className="fw-bold mb-0">Our Vision</h6>
-                    <p className="small text-muted mb-0">Global leader in care</p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6">
-                <div className="d-flex align-items-center">
-                  <div className="vision-mission-icon me-3">🚀</div>
-                  <div>
-                    <h6 className="fw-bold mb-0">Our Mission</h6>
-                    <p className="small text-muted mb-0">Patient first always</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div className="container">
+        <div className="row align-items-center g-5">
+
+          {/* Left Side Image */}
+          <div className="col-lg-5">
+           <div className="col-lg-5">
+  <div className="about-img-wrapper"></div>
+</div>
           </div>
+
+          {/* Right Side Content */}
+          <div className="col-lg-7">
+            <h2
+              className="fw-bold mb-4"
+              style={{ color: '#005b70' }}
+            >
+              About Gurushree Hospital
+            </h2>
+
+            <p
+              className="text-muted mb-4"
+              style={{ lineHeight: '1.8', fontSize: '1.05rem' }}
+            >
+              <strong className="text-dark">2.5 years</strong> of medical
+              experience and expertise of the founder{" "}
+              <strong>Dr. S.B. GANGADHAR</strong> at Gurushree Hospital has
+              resulted in a much needed multi speciality state of the art,
+              all-in-one medical center with highly qualified specialist
+              doctors, trained paramedical staff and A-1 grade in-patient
+              and out-patient facilities.
+            </p>
+
+            <p
+              className="text-muted mb-4"
+              style={{ lineHeight: '1.8', fontSize: '1.05rem' }}
+            >
+              Exceptional clinical success rates, traditional care & warmth
+              with superior technology makes Gurushree Hospital a trusted
+              healthcare destination focused on personalised patient care.
+            </p>
+
+            <p
+              className="text-muted mb-4"
+              style={{ lineHeight: '1.8', fontSize: '1.05rem' }}
+            >
+              Gurushree hi-tech multi speciality hospital is the only
+              multi speciality hospital around Vijaynagar, Magadi Road and
+              Nagarbhavi within a radius of 4.5 km having facilities under
+              one roof.
+            </p>
+
+            <p
+              className="fw-bold mb-4"
+              style={{ color: '#00a3c8', fontSize: '1.1rem' }}
+            >
+              Dr. Rohith S.G. is the CEO of Gurushree Hospital.
+            </p>
+
          
+          </div>
+
         </div>
       </div>
     </div>
