@@ -172,7 +172,7 @@ const Home = () => {
 <Facilities/>
 <Specialities />
 <SuperSpecialities />
-<Team/>
+
 <Contact/>
     </main>
   
