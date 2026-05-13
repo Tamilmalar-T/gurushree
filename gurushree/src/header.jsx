@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaMapMarkerAlt, FaPhone, FaFacebookF, FaTwitter, FaLinkedinIn, FaGoogle, FaHeartbeat, FaEnvelope } from 'react-icons/fa';
-import './pages/css/header.css'
+import './pages/css/Header.css'
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
