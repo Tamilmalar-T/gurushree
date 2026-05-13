@@ -104,33 +104,68 @@ const Home = () => {
         </div>
       </div>
 
+      {/* 3-Column Info Cards Section */}
+     <section
+  className="info-cards-section position-relative"
+  style={{ marginTop: '-80px', zIndex: 10 }}
+>
+  <div className="container">
 
-      {/* Promotional Banner */}
-      <section className="py-4 mt-5">
-        <div className="container">
-          <div className="bg-warning bg-opacity-10 border border-warning border-opacity-25 rounded-5 p-4 shadow-sm">
-            <div className="row align-items-center">
-              <div className="col-md-7 d-flex align-items-center">
-                <div className="promo-badge bg-success text-white rounded-circle d-flex flex-column align-items-center justify-content-center me-4 shadow" style={{ width: '90px', height: '90px', border: '4px dashed white' }}>
-                  <span className="small mb-0">Get</span>
-                  <span className="fw-bold fs-4">25%</span>
-                  <span className="small mt-n1">OFF</span>
-                </div>
-                <div>
-                  <h3 className="fw-extrabold mb-1" style={{ color: '#854d0e' }}>Health Packages</h3>
-                  <p className="mb-0 text-dark opacity-75">Limited time offer on comprehensive body checkups.</p>
-                </div>
-              </div>
-              <div className="col-md-5 mt-4 mt-md-0 text-md-end border-start-md ps-md-5">
-                <h4 className="fw-bold mb-1">Call for Enquiry:</h4>
-                <div className="fs-5 fw-bold text-primary">
-                  080-23392641 <span className="text-muted px-2">/</span> 98866 92641
-                </div>
-              </div>
-            </div>
+    <div className="info-card-wrapper">
+
+      {/* Card 1 */}
+      <div className="info-card offer-card">
+        <div className="offer-circle">
+          <span className="offer-small">GET</span>
+          <span className="offer-percent">25%</span>
+          <span className="offer-small">OFF</span>
+        </div>
+
+        <div>
+          <h5 className="fw-bold mb-1">Special Discount</h5>
+          <p className="mb-0">
+            Exclusive offers on selected health checkup packages.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 2 */}
+      <div className="info-card package-card">
+        <div className="info-icon">
+          🏥
+        </div>
+
+        <div>
+          <h4 className="fw-bold mb-2">Health Packages</h4>
+          <p className="mb-0">
+            Complete preventive health checkups for your family.
+          </p>
+        </div>
+      </div>
+
+      {/* Card 3 */}
+      <div className="info-card enquiry-card">
+        <div className="info-icon">
+          📞
+        </div>
+
+        <div>
+          <h5 className="fw-bold mb-2">Call for Enquiry</h5>
+
+          <div className="contact-number">
+            080-23392641
+          </div>
+
+          <div className="contact-number">
+            98866 92641
           </div>
         </div>
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
       
 <About />

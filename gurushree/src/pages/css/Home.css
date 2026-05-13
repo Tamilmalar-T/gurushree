@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* background-image: url('../Image/bannerbg.jpg'); */
+  background-image: url('../Image/bannerbg.jpg');
  
 }
 
@@ -21,6 +21,114 @@
   margin-bottom: 40px;
 }
 
+.info-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.info-card {
+  flex: 1;
+  min-width: 280px;
+  padding: 35px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.info-card:not(:last-child) {
+  border-right: 1px solid #f1f1f1;
+}
+
+/* Offer Card */
+.offer-card {
+  background: linear-gradient(135deg, #00a3c8, #007d99);
+  color: white;
+}
+
+.offer-circle {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.offer-small {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.offer-percent {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Package Card */
+.package-card {
+  background: #ffffff;
+}
+
+.package-card h4 {
+  color: #0a2a43;
+}
+
+.package-card p {
+  color: #6c757d;
+}
+
+/* Enquiry Card */
+.enquiry-card {
+  background: #f8fcfd;
+}
+
+.enquiry-card h5 {
+  color: #0a2a43;
+}
+
+.contact-number {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00a3c8;
+  line-height: 1.6;
+}
+
+/* Icons */
+.info-icon {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  border-radius: 50%;
+  background: #eaf9fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+
+  .info-card {
+    border-right: 0 !important;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .info-card:last-child {
+    border-bottom: 0;
+  }
+
+}
 @media (max-width: 991px) {
   .hero-title {
     font-size: 3rem !important;
