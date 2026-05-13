@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Header from './Header.jsx'
+
 import Footer from './pages/Footer.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -10,6 +10,7 @@ import Specialities from './pages/Specialities.jsx'
 import SuperSpecialities from './pages/SuperSpecialities.jsx'
 import Contact from './pages/Contact.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
+import Header from './header.jsx'
 
 function App() {
   return (
