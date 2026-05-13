@@ -1,67 +1,76 @@
 import React from 'react'
 import './css/Contact.css'
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 
 const Contact = () => {
   return (
-    <div className="py-5 bg-white contact-page">
+    <section className="contact-section py-5">
       <div className="container py-5">
-        <div className="row g-5">
+        
+        <div className="text-center mb-5">
+          <span className="contact-subtitle">CONTACT US</span>
+          <h1 className="contact-title mt-3">We’re Always Ready To Help You</h1>
+          <p className="contact-description mx-auto">
+            Reach out to our medical team for appointments, emergency support, or general enquiries.
+          </p>
+        </div>
+
+        <div className="row g-4 align-items-stretch">
+
+          {/* Left Info */}
           <div className="col-lg-5">
-            <h1 className="fw-bold mb-4">Get in Touch</h1>
-            <p className="text-muted mb-5">Have questions? We are here to help you. Reach out to us via any of the following channels.</p>
-            
-            <div className="d-flex mb-4 contact-info-item">
-              <div className="contact-icon-box me-4">📍</div>
-              <div>
-                <h6 className="fw-bold mb-1">Our Location</h6>
-                <p className="text-muted small mb-0">123 Hospital Road, Bangalore, India</p>
-              </div>
-            </div>
-            
-            <div className="d-flex mb-4 contact-info-item">
-              <div className="contact-icon-box me-4">📞</div>
-              <div>
-                <h6 className="fw-bold mb-1">Phone Number</h6>
-                <p className="text-muted small mb-0">+91 98765 43210</p>
-              </div>
-            </div>
-            
-            <div className="d-flex contact-info-item">
-              <div className="contact-icon-box me-4">✉️</div>
-              <div>
-                <h6 className="fw-bold mb-1">Email Address</h6>
-                <p className="text-muted small mb-0">contact@gurushree.com</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="col-lg-7">
-            <div className="card border-0 shadow p-4 p-md-5 contact-card">
-              <h3 className="fw-bold mb-4">Send us a Message</h3>
-              <form>
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <input type="text" className="form-control form-control-lg bg-light border-0" placeholder="Your Name" />
-                  </div>
-                  <div className="col-md-6">
-                    <input type="email" className="form-control form-control-lg bg-light border-0" placeholder="Email Address" />
-                  </div>
-                  <div className="col-12">
-                    <input type="text" className="form-control form-control-lg bg-light border-0" placeholder="Subject" />
-                  </div>
-                  <div className="col-12">
-                    <textarea className="form-control form-control-lg bg-light border-0" rows="5" placeholder="Message"></textarea>
-                  </div>
-                  <div className="col-12 mt-4">
-                    <button type="submit" className="btn btn-premium btn-lg w-100">Send Message</button>
-                  </div>
+            <div className="contact-info-wrapper h-100">
+
+              <div className="contact-info-card d-flex">
+                <div className="contact-icon">
+                  <FaMapMarkerAlt />
                 </div>
-              </form>
+
+                <div>
+                  <h5>Hospital Address</h5>
+                  <p>123 Hospital Road, Bangalore, India</p>
+                </div>
+              </div>
+
+              <div className="contact-info-card d-flex">
+                <div className="contact-icon">
+                  <FaPhoneAlt />
+                </div>
+
+                <div>
+                  <h5>Phone Number</h5>
+                  <p>+91 98765 43210</p>
+                </div>
+              </div>
+
+              <div className="contact-info-card d-flex">
+                <div className="contact-icon">
+                  <FaEnvelope />
+                </div>
+
+                <div>
+                  <h5>Email Address</h5>
+                  <p>contact@gurushree.com</p>
+                </div>
+              </div>
+
             </div>
           </div>
+{/* right Side Image  */}
+          <div className="col-lg-7">
+  <div className="contact-image-box h-100">
+    <img
+      src="../Image/bannerbg.jpg"
+      alt="Contact"
+      className="img-fluid w-100 h-100 contact-side-image"
+    />
+  </div>
+</div>
+      
+
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

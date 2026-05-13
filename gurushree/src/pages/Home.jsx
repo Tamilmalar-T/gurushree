@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom'
 import './css/Home.css'
 import heroBg from '../assets/hero_bg.png'
 import About from './About'
+import Facilities from './Facilities'
+import Specialities from './Specialities'
+import Team from './Team'
+import Contact from './Contact'
+import SuperSpecialities from './SuperSpecialities'
 
 const Home = () => {
   return (
@@ -129,6 +134,11 @@ const Home = () => {
 
       
 <About />
+<Facilities/>
+<Specialities />
+<SuperSpecialities />
+<Team/>
+<Contact/>
     </main>
   
   

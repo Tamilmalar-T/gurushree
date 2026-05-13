@@ -1,0 +1,119 @@
+.footer-section {
+  background-color: #1b5b6b; /* Dark teal background matching the image */
+  color: #fff;
+  padding: 80px 0 0 0;
+  font-family: 'Inter', sans-serif; /* Or default font used in project */
+  margin-top: auto;
+}
+
+.footer-content {
+  padding-bottom: 40px;
+}
+
+.footer-logo {
+  margin-bottom: 30px;
+}
+
+.footer-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.footer-text {
+  color: #a4cdd5; /* Light teal for text */
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.footer-link {
+  color: #a4cdd5 !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #00a3c8 !important;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #a4cdd5;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #00a3c8;
+  border-color: #00a3c8;
+  color: #fff;
+}
+
+.working-hours span {
+  font-weight: 500;
+  color: #fff;
+}
+
+.working-hours p {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 12px !important;
+}
+
+.working-hours p:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0 !important;
+}
+
+.emergency-number {
+  color: #00a3c8;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #a4cdd5;
+  font-size: 14px;
+}
+
+.scroll-to-top {
+  background-color: #114b5c;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #00a3c8;
+}
+
+@media (max-width: 991.98px) {
+  .footer-heading {
+    margin-top: 20px;
+  }
+}

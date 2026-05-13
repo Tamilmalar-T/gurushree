@@ -115,7 +115,7 @@ const Facilities = () => {
 
   return (
     <div className="facilities-page">
-      <div className="container py-5">
+      <div className="container py-5" style={{ marginTop: '100px' }}>
         <div className="row g-5">
           {/* Main Column: Our Facilities */}
           <div className="col-lg-12">
@@ -149,7 +149,7 @@ const Facilities = () => {
             ))}
           </div>
 
-         <div className="col-lg-4">
+         {/* <div className="col-lg-4">
             <div className="health-packages-card rounded-4 shadow-sm p-4 h-100 position-sticky" style={{ top: '120px' }}>
               <h3 className="text-warning fw-bold mb-3 d-inline-block border-bottom border-warning border-3 pb-2">Health Packages</h3>
               <p className="text-muted lh-lg mb-4 text-justify">
@@ -188,7 +188,7 @@ const Facilities = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
