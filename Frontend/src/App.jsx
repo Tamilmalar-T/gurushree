@@ -11,6 +11,8 @@ import SuperSpecialities from './pages/SuperSpecialities.jsx'
 import Contact from './pages/Contact.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
 import Header from './header.jsx'
+import Testing from './pages/testing.jsx'
+import Testing2 from './pages/Testing2.jsx'
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
       <ScrollToTop />
       <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Header />
-        
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -27,6 +29,8 @@ function App() {
           <Route path="/specialities" element={<Specialities />} />
           <Route path="/super-specialities" element={<SuperSpecialities />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/testing" element={<Testing/>} />
+          <Route path="/testing2" element={<Testing2/>} />
         </Routes>
 
         <Footer />

@@ -92,8 +92,9 @@ const Header = () => {
                 </a>
                 <ul className="dropdown-menu shadow border-0 mt-2" aria-labelledby="specialitiesDropdown">
                   <li><Link className="dropdown-item py-2" to="/specialities" onClick={collapseNav}>Speciality</Link></li>
-
                   <li><Link className="dropdown-item py-2" to="/super-specialities" onClick={collapseNav}>Super-Speciality</Link></li>
+                  <li><Link className="dropdown-item py-2" to="/testing" onClick={collapseNav}>Testing</Link></li>
+                  <li><Link className="dropdown-item py-2" to="/testing2" onClick={collapseNav}>Testing 2</Link></li>
                 </ul>
               </li>
               <li className="nav-item mx-2"><Link className="nav-link text-dark fw-medium" to="/contact" onClick={collapseNav}>Contact</Link></li>

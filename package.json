@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "dev": "npm run dev --prefix gurushree",
-    "build": "npm run build --prefix gurushree && mkdir -p build && cp -r gurushree/dist/. build/",
-    "preview": "npm run preview --prefix gurushree",
-    "postinstall": "npm install --prefix gurushree"
+    "dev": "npm run dev --prefix Frontend",
+    "build": "npm run build --prefix Frontend && mkdir -p build && cp -r Frontend/dist/. build/",
+    "preview": "npm run preview --prefix Frontend",
+    "postinstall": "npm install --prefix Frontend"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
