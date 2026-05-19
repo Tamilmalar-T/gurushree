@@ -86,7 +86,7 @@ const departments = [
     name: "Dentistry",
     subtitle: "Comprehensive Dental Care",
     icon: <FaTooth />,
-    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80",
+    // image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80",
     description: "Complete dental care including ICU-supported Maxillofacial Surgery, Implant Procedures, Facial Surgeries, Cosmetic procedures, Orthodontic and Endodontic Treatments.",
     highlights: ["ICU Supported Oral & Jaw Surgery", "Fully Specialized Implant Clinic", "High-Aesthetic Smile Correction"],
     treatments: [
@@ -586,11 +586,11 @@ const Testing3 = () => {
                                   <span className="pulse-indicator"></span>
                                   <span className="pulse-text">Available for Consultation</span>
                                 </div>
-                                <div className="doctor-socials mt-3">
+                                {/* <div className="doctor-socials mt-3">
                                   <a href="#" className="social-icon"><FaFacebook /></a>
                                   <a href="#" className="social-icon"><FaTwitter /></a>
                                   <a href="#" className="social-icon"><FaLinkedin /></a>
-                                </div>
+                                </div> */}
                               </div>
                             </div>
                           </div>
@@ -660,10 +660,10 @@ const Testing3 = () => {
                           )}
                         </div>
                         <h4 className="category-card-name">{dept.name}</h4>
-                        <p className="category-card-desc">{dept.description}</p>
-                        <div className="category-card-footer mt-auto d-flex align-items-center justify-content-between">
+                        {/* <p className="category-card-desc">{dept.description}</p> */}
+                        {/* <div className="category-card-footer mt-auto d-flex align-items-center justify-content-between">
                           <span className="explore-tag">Explore Specialties <FaArrowRight className="arrow-icon ms-2" /></span>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   );
