@@ -2,7 +2,8 @@ import React from 'react';
 import './css/Facilities.css';
 import { FaFilePdf, FaArrowRight } from 'react-icons/fa';
 
-const Facilities = () => {
+
+const Facilities = ({ isHome }) => {
   const facilitiesList = [
     {
       title: 'Health Packages',
@@ -114,42 +115,44 @@ const Facilities = () => {
   ];
 
   return (
-    <div className="facilities-page">
-      <div className="container py-5">
-        <div className="row g-5">
-          {/* Main Column: Our Facilities */}
-          <div className="col-lg-12">
-            <div className="section-header mb-4">
-              <h2 className="fw-bold text-primary border-bottom pb-2 border-primary border-3 d-inline-block">Our Facilities</h2>
-              <p className="text-secondary fw-semibold mt-2">Gurushree Hi-Tech Multi-Speciality Hospital offers -</p>
-            </div> 
+    <>
 
-            {facilitiesList.map((facility, index) => (
-              <div key={index} className="facility-item bg-white rounded-4 shadow-sm overflow-hidden mb-4 border border-light">
-                <h4 className="facility-title text-white p-3 mb-0 fw-bold">{facility.title}</h4>
-                <div className={`d-flex flex-column ${index % 2 === 0 ? 'flex-md-row' : 'flex-md-row-reverse'}`}>
-                  <div className="p-4 flex-grow-1 d-flex align-items-center">
-                    <p className="text-muted lh-lg mb-0 w-100">
-                      {facility.desc}
-                    </p>
-                  </div>
-                  {(facility.customContent || facility.bgClass) && (
-                    <div className="facility-img-wrapper flex-shrink-0" style={{ width: '100%', maxWidth: '350px' }}>
-                      {facility.customContent ? (
-                        <div className="w-100 h-100 d-flex flex-column justify-content-center p-3 bg-light">
-                          {facility.customContent}
-                        </div>
-                      ) : (
-                        <div className={`facility-img ${facility.bgClass} w-100 h-100`}></div>
-                      )}
-                    </div>
-                  )}
-                </div>
+      <div className="facilities-page">
+        <div className={`container ${isHome ? 'py-2' : 'py-5'}`}>
+          <div className="row g-5">
+            {/* Main Column: Our Facilities */}
+            <div className="col-lg-12">
+              <div className="section-header mb-4">
+                <h2 className="fw-bold text-primary border-bottom pb-2 border-primary border-3 d-inline-block">Our Facilities</h2>
+                <p className="text-secondary fw-semibold mt-2">Gurushree Hi-Tech Multi-Speciality Hospital offers -</p>
               </div>
-            ))}
-          </div>
 
-         {/* <div className="col-lg-4">
+              {facilitiesList.map((facility, index) => (
+                <div key={index} className="facility-item bg-white rounded-4 shadow-sm overflow-hidden mb-4 border border-light">
+                  <h4 className="facility-title text-white p-3 mb-0 fw-bold">{facility.title}</h4>
+                  <div className={`d-flex flex-column ${index % 2 === 0 ? 'flex-md-row' : 'flex-md-row-reverse'}`}>
+                    <div className="p-4 flex-grow-1 d-flex align-items-center">
+                      <p className="text-muted lh-lg mb-0 w-100">
+                        {facility.desc}
+                      </p>
+                    </div>
+                    {(facility.customContent || facility.bgClass) && (
+                      <div className="facility-img-wrapper flex-shrink-0" style={{ width: '100%', maxWidth: '350px' }}>
+                        {facility.customContent ? (
+                          <div className="w-100 h-100 d-flex flex-column justify-content-center p-3 bg-light">
+                            {facility.customContent}
+                          </div>
+                        ) : (
+                          <div className={`facility-img ${facility.bgClass} w-100 h-100`}></div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* <div className="col-lg-4">
             <div className="health-packages-card rounded-4 shadow-sm p-4 h-100 position-sticky" style={{ top: '120px' }}>
               <h3 className="text-warning fw-bold mb-3 d-inline-block border-bottom border-warning border-3 pb-2">Health Packages</h3>
               <p className="text-muted lh-lg mb-4 text-justify">
@@ -190,9 +193,10 @@ const Facilities = () => {
             </div>
           </div> */}
 
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

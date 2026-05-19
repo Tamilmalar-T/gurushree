@@ -11,9 +11,9 @@ import SuperSpecialities from './pages/SuperSpecialities.jsx'
 import Contact from './pages/Contact.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
 import Header from './Header.jsx'
-import Testing from './pages/testing.jsx'
-import Testing2 from './pages/Testing2.jsx'
-import Testing3 from './pages/Testing3.jsx'
+import Template1 from './pages/Template1.jsx'
+import Template2 from './pages/Template2.jsx'
+import Template3 from './pages/Template3.jsx'
 
 
 function App() {
@@ -21,8 +21,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      
-< Header/>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -31,9 +30,9 @@ function App() {
           <Route path="/specialities" element={<Specialities />} />
           <Route path="/super-specialities" element={<SuperSpecialities />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/testing" element={<Testing/>} />
-          <Route path="/testing2" element={<Testing2/>} />
-          <Route path="/testing3" element={<Testing3/>} />
+          <Route path="/testing" element={<Template1 />} />
+          <Route path="/testing2" element={<Template2 />} />
+          <Route path="/testing3" element={<Template3 />} />
         </Routes>
 
         <Footer />

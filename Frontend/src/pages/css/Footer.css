@@ -117,3 +117,63 @@
     margin-top: 20px;
   }
 }
+
+@media (max-width: 767.98px) {
+  .footer-section {
+    padding: 40px 0 0 0;
+  }
+
+  .footer-content {
+    padding-bottom: 20px;
+  }
+
+  .footer-logo {
+    margin-bottom: 15px;
+  }
+
+  .footer-heading {
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+  }
+
+  .footer-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .footer-section .mb-4 {
+    margin-bottom: 1rem !important;
+  }
+
+  .footer-socials {
+    gap: 8px;
+  }
+
+  .social-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .working-hours p {
+    padding-bottom: 8px;
+    margin-bottom: 8px !important;
+  }
+
+  .emergency-number {
+    font-size: 24px;
+  }
+
+  .footer-bottom {
+    padding: 15px 0;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .scroll-to-top {
+    width: 36px;
+    height: 36px;
+  }
+}

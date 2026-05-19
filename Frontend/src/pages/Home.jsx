@@ -8,6 +8,7 @@ import Specialities from './Specialities'
 import Team from './Team'
 import Contact from './Contact'
 import SuperSpecialities from './SuperSpecialities'
+import Template3 from './Template3'
 
 const Home = () => {
   return (
@@ -168,12 +169,12 @@ const Home = () => {
 </section>
 
       
-<About />
-<Facilities/>
-<Specialities />
-<SuperSpecialities />
+<About isHome={true} />
+<Facilities isHome={true} />
+<Template3 isHome={true} />
 
-<Contact/>
+
+<Contact isHome={true} />
     </main>
   
   

@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight, FaHeartbeat, FaSearch, FaCalendarCheck } from "react-icons/fa";
-import "./Testing2.css";
+import "./Template2.css";
 
 const departments = [
   {
@@ -301,7 +301,7 @@ const departments = [
   }
 ];
 
-const Testing2 = () => {
+const Template2 = () => {
   const deptDoctors = {
     1: ["Dr. S.B. Gangadhar", "Dr. Manjunath Sarangi"],
     3: ["Dr. Sugandh"],
@@ -594,4 +594,4 @@ const Testing2 = () => {
   );
 };
 
-export default Testing2;
+export default Template2;

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./Testing.css";
+import "./Template1.css";
 
 const departments = [
   {
@@ -108,7 +108,7 @@ const departments = [
   }
 ];
 
-const Testing = () => {
+const Template1 = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDept, setSelectedDept] = useState(null);
   const sliderRef = useRef(null);
@@ -237,4 +237,4 @@ const Testing = () => {
   );
 };
 
-export default Testing;
+export default Template1;

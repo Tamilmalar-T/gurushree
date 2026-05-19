@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import './css/Specialities.css'
 
-const SuperSpecialities = () => {
+
+const SuperSpecialities = ({ isHome }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const specs = [
     { name: 'Endocrinology / Diabetes', detail: 'Advanced care and management of hormonal imbalances, diabetes, and metabolic disorders.' },
-    { 
-      name: 'Gastroenterology', 
+    {
+      name: 'Gastroenterology',
       customContent: (
         <div className="mb-5 w-100">
           <p className="text-muted lh-lg mb-4">
@@ -26,8 +27,8 @@ const SuperSpecialities = () => {
         </div>
       )
     },
-    { 
-      name: 'Oral & Maxillofacial Surgery', 
+    {
+      name: 'Oral & Maxillofacial Surgery',
       customContent: (
         <div className="mb-5 w-100">
           <ol className="text-muted lh-lg mb-4" style={{ paddingLeft: '1.5rem', listStyleType: 'lower-alpha' }}>
@@ -48,8 +49,8 @@ const SuperSpecialities = () => {
     { name: 'Neuro Surgery', detail: 'Advanced surgical interventions for complex neurological conditions affecting the brain, spine, and cerebrovascular system.' },
     { name: 'Oncology', detail: 'Comprehensive cancer care involving diagnosis, targeted therapies, chemotherapy, and multidisciplinary treatment planning.' },
     { name: 'Paediatric Surgery', detail: 'Specialized surgical care for infants, children, and adolescents with congenital anomalies and acquired conditions.' },
-    { 
-      name: 'Plastic Surgery', 
+    {
+      name: 'Plastic Surgery',
       customContent: (
         <div className="mb-5 w-100">
           <ul className="text-muted lh-lg mb-4" style={{ paddingLeft: '1.5rem', listStyleType: 'disc' }}>
@@ -75,8 +76,8 @@ const SuperSpecialities = () => {
       )
     },
     { name: 'Cosmetic Surgery', detail: 'Aesthetic procedures aimed at enhancing physical appearance and boosting self-confidence through advanced techniques.' },
-    { 
-      name: 'Pulmonary Medicine', 
+    {
+      name: 'Pulmonary Medicine',
       customContent: (
         <div className="mb-5 w-100">
           <p className="text-muted lh-lg mb-4">
@@ -97,8 +98,8 @@ const SuperSpecialities = () => {
         </div>
       )
     },
-    { 
-      name: 'General & Minimal Invasive Surgery', 
+    {
+      name: 'General & Minimal Invasive Surgery',
       customContent: (
         <div className="mb-5 w-100">
           <p className="text-muted lh-lg mb-4">
@@ -129,13 +130,15 @@ const SuperSpecialities = () => {
   const activeSpec = specs[activeTab];
 
   return (
-    <div className=" specialities-page bg-light">
-      <div className="container py-5">
+    <>
+
+      <div className=" specialities-page bg-light">
+        <div className={`container ${isHome ? 'py-2' : 'py-5'}`}>
         <div className="text-center mb-5">
           <h1 className="fw-bold text-primary">Super-Specialities</h1>
           <p className="text-muted">Advanced and highly specialized medical care for complex conditions.</p>
         </div>
-        
+
         <div className="row g-4">
           {/* Left Side: List of Specialities */}
           <div className="col-lg-4 col-md-5">
@@ -163,10 +166,10 @@ const SuperSpecialities = () => {
                   {activeSpec.detail}
                 </p>
               )}
-              
+
               <div className="w-100 border-top pt-4 mt-auto">
                 <div className="d-flex align-items-center flex-wrap gap-3">
-                
+
                 </div>
               </div>
             </div>
@@ -174,6 +177,7 @@ const SuperSpecialities = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

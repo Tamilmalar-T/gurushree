@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { 
   FaChevronLeft, 
   FaChevronRight, 
@@ -26,7 +26,7 @@ import {
   FaShieldAlt,
   FaAward
 } from "react-icons/fa";
-import "./Testing3.css";
+import "./Template3.css";
 
 const departments = [
   {
@@ -421,7 +421,10 @@ const departments = [
   }
 ];
 
-const Testing3 = () => {
+const Template3 = ({ isHome }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const deptDoctors = {
     1: ["Dr. S.B. Gangadhar", "Dr. Manjunath Sarangi"],
     3: ["Dr. Sugandh"],
@@ -448,13 +451,30 @@ const Testing3 = () => {
     }
   }, [selectedDept]);
 
+  useEffect(() => {
+    if (!isHome && location.state?.selectedDeptId) {
+      const dept = departments.find(d => d.id === location.state.selectedDeptId);
+      if (dept) {
+        setSelectedDept(dept);
+      }
+    }
+  }, [location.state, isHome]);
+
+  const handleDeptClick = (dept) => {
+    if (isHome) {
+      navigate('/testing3', { state: { selectedDeptId: dept.id } });
+    } else {
+      setSelectedDept(dept);
+    }
+  };
+
   const filteredDepartments = departments.filter((dept) =>
     dept.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
     dept.subtitle.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
-    <div className="zcare-app-wrapper" style={{ marginTop: '75px' }}>
+    <div className="zcare-app-wrapper" style={{ marginTop: isHome ? '0px' : '75px', minHeight: isHome ? 'auto' : '100vh' }}>
       {selectedDept ? (
         /* =========================================================
            Visual Split Details Layout - Breathtakingly Beautiful
@@ -610,8 +630,8 @@ const Testing3 = () => {
         /* =========================================================
            ZenithCare Blue Showcase Category Grid (Overview)
            ========================================================= */
-        <div className="zcare-showcase-wrapper">
-          <div className="container py-5">
+        <div className="zcare-showcase-wrapper" style={isHome ? { padding: '0px', margin: '0px' } : {}}>
+          <div className={`container ${isHome ? 'py-0' : 'py-5'}`}>
             
             {/* Header Text Block */}
             <div className="zcare-header-block text-center text-lg-start mb-5 d-flex justify-content-between align-items-center flex-wrap gap-4">
@@ -647,7 +667,7 @@ const Testing3 = () => {
                     <div key={dept.id} className="col-12 col-md-6 col-lg-4">
                       <div 
                         className="zcare-category-card"
-                        onClick={() => setSelectedDept(dept)}
+                        onClick={() => handleDeptClick(dept)}
                       >
                         <div className="category-card-header d-flex justify-content-between align-items-start">
                           <div className="category-icon-box">
@@ -685,4 +705,4 @@ const Testing3 = () => {
   );
 };
 
-export default Testing3;
+export default Template3;

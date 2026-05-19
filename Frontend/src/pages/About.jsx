@@ -1,9 +1,14 @@
 import React from 'react'
 import './css/About.css'
 
-const About = () => {
+
+
+
+const About = ({ isHome }) => {
   return (
-    <div className="py-5 about-page">
+    <>
+
+    <div className={`about-page ${isHome ? 'home-about-page' : ''}`}>
       <div className="container">
         <div className="row align-items-center g-5">
 
@@ -25,7 +30,7 @@ const About = () => {
               className="text-muted mb-4"
               style={{ lineHeight: '1.8', fontSize: '1.05rem' }}
             >
-              <strong className="text-dark">2.5 years</strong> of medical
+              <strong className="text-dark">30 years</strong> of medical
               experience and expertise of the founder{" "}
               <strong>Dr. S.B. GANGADHAR</strong> at Gurushree Hospital has
               resulted in a much needed multi speciality state of the art,
@@ -60,12 +65,13 @@ const About = () => {
               Dr. Rohith S.G. is the CEO of Gurushree Hospital.
             </p>
 
-         
+
           </div>
 
         </div>
       </div>
     </div>
+    </>
   )
 }
 

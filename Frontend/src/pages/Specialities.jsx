@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './css/Specialities.css'
 
-const Specialities = () => {
+
+const Specialities = ({ isHome }) => {
   const [activeTab, setActiveTab] = useState(0);
 
 
@@ -186,8 +187,10 @@ const Specialities = () => {
   const activeSpec = specs[activeTab];
 
   return (
-    <div className=" specialities-page bg-light">
-      <div className="container py-5">
+    <>
+
+      <div className=" specialities-page bg-light">
+        <div className={`container ${isHome ? 'py-2' : 'py-5'}`}>
         <div className="text-center mb-5">
           <h1 className="fw-bold text-primary">Medical Specialities</h1>
           <p className="text-muted">Expert doctors in diverse fields of medicine.</p>
@@ -231,6 +234,7 @@ const Specialities = () => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

@@ -6,6 +6,10 @@
   background-position: center;
 }
 
+.home-about-page {
+  padding-top: 40px !important;
+}
+
 .about-img-wrapper {
   width: 100%;
   max-width: 400px;
@@ -15,7 +19,7 @@
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
 
@@ -35,6 +39,7 @@
     padding-top: 80px !important;
     padding-bottom: 40px !important;
   }
+
   .about-img-wrapper {
     max-width: 300px;
   }

@@ -2,11 +2,14 @@ import React from 'react'
 import './css/Contact.css'
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 
-const Contact = () => {
+
+const Contact = ({ isHome }) => {
   return (
-    <section className="contact-section py-5">
-      <div className="container py-5">
-        
+    <>
+
+      <section className={`contact-section ${isHome ? 'pt-0 pb-2' : 'py-5'}`}>
+        <div className={`container ${isHome ? 'pt-0 pb-2' : 'py-5'}`}>
+
         <div className="text-center mb-5">
           <span className="contact-subtitle">CONTACT US</span>
           <h1 className="contact-title mt-3">We’re Always Ready To Help You</h1>
@@ -56,21 +59,22 @@ const Contact = () => {
 
             </div>
           </div>
-{/* right Side Image  */}
+          {/* right Side Image  */}
           <div className="col-lg-7">
-  <div className="contact-image-box h-100">
-    <img
-      src="../Image/bannerbg.jpg"
-      alt="Contact"
-      className="img-fluid w-100 h-100 contact-side-image"
-    />
-  </div>
-</div>
-      
+            <div className="contact-image-box h-100">
+              <img
+                src="../Image/bannerbg.jpg"
+                alt="Contact"
+                className="img-fluid w-100 h-100 contact-side-image"
+              />
+            </div>
+          </div>
+
 
         </div>
       </div>
-    </section>
+      </section>
+    </>
   )
 }
 
