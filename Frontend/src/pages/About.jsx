@@ -8,10 +8,8 @@ const About = () => {
         <div className="row align-items-center g-5">
 
           {/* Left Side Image */}
-          <div className="col-lg-5">
-           <div className="col-lg-5">
-  <div className="about-img-wrapper"></div>
-</div>
+          <div className="col-lg-5 d-flex justify-content-center">
+            <div className="about-img-wrapper"></div>
           </div>
 
           {/* Right Side Content */}

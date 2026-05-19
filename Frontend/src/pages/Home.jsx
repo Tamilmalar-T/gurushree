@@ -22,9 +22,9 @@ const Home = () => {
               <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div className="row">
                   <div className="col-lg-7 col-xl-6 text-start reveal">
-                    <h1 className="hero-title mb-4" style={{ fontSize: '4.5rem', fontWeight: '800', lineHeight: '1.1', color: '#1e293b', letterSpacing: '-1px' }}>
+                    <h1 className="hero-title mb-4">
                       Caring Hands, <br />
-                      <span style={{ color: '#db2777' }}>Caring Hearts </span>
+                      <span className="hero-span-pink">Caring Hearts </span>
                     </h1>
                     <p className="hero-subtitle mb-3 pe-lg-4" style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8' }}>
                       GURUSHREE HI-TECH MULTISPECIALITY HOSPITAL is a 102 bedded hospital located in the heart of Chandra Layout opposite to the main bus terminal
@@ -57,9 +57,9 @@ const Home = () => {
               <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div className="row">
                   <div className="col-lg-7 col-xl-6 text-start reveal">
-                    <h1 className="hero-title mb-4" style={{ fontSize: '4.5rem', fontWeight: '800', lineHeight: '1.1', color: '#1e293b', letterSpacing: '-1px' }}>
+                    <h1 className="hero-title mb-4">
                       State-of-the-Art <br />
-                      <span style={{ color: '#0ea5e9' }}>Facilities</span>
+                      <span className="hero-span-blue">Facilities</span>
                     </h1>
                     <p className="hero-subtitle mb-5 pe-lg-4" style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8' }}>
                       Equipped with modern technology and a dedicated 24/7 trauma care center to handle medical emergencies with utmost precision and care.
@@ -82,9 +82,9 @@ const Home = () => {
               <div className="container" style={{ position: 'relative', zIndex: 2 }}>
                 <div className="row">
                   <div className="col-lg-7 col-xl-6 text-start reveal">
-                    <h1 className="hero-title mb-4" style={{ fontSize: '4.5rem', fontWeight: '800', lineHeight: '1.1', color: '#1e293b', letterSpacing: '-1px' }}>
+                    <h1 className="hero-title mb-4">
                       Expert Medical <br />
-                      <span style={{ color: '#10b981' }}>Professionals</span>
+                      <span className="hero-span-green">Professionals</span>
                     </h1>
                     <p className="hero-subtitle mb-5 pe-lg-4" style={{ color: '#475569', fontSize: '1.1rem', lineHeight: '1.8' }}>
                       A dedicated team of over 150+ expert staff committed to providing holistic allopathic and integrated medicine for a healthier tomorrow.

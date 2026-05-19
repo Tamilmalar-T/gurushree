@@ -60,12 +60,12 @@ const Header = () => {
       <nav className={`navbar navbar-expand-lg  ${scrolled ? 'py-2' : 'py-3'}`} style={{ backgroundColor: '#80d3e5', transition: 'all 0.3s' }}>
         <div className="container">
           <Link className="navbar-brand d-flex align-items-center" to="/" onClick={collapseNav}>
-            <FaHeartbeat className="me-2" style={{ color: '#00a3c8', fontSize: '40px' }} />
+            <FaHeartbeat className="me-2 brand-heart-icon" style={{ color: '#00a3c8' }} />
             <div className="d-flex flex-column justify-content-center">
-              <span className="fw-bold" style={{ color: '#222', fontSize: '24px', lineHeight: '1.1' }}>
+              <span className="fw-bold brand-title">
                 Gurushree
               </span>
-              <span style={{ color: '#777', fontSize: '10px', letterSpacing: '1px', textTransform: 'uppercase', fontWeight: '500' }}>
+              <span className="brand-subtitle">
                 Medical & Medical Health
               </span>
             </div>

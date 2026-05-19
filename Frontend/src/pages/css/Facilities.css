@@ -157,3 +157,29 @@
   min-height: 200px;
 }
 
+@media (max-width: 991.98px) {
+  .facilities-page {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .facilities-page {
+    margin-top: 60px;
+  }
+  .facility-img-wrapper {
+    max-width: 100% !important;
+    height: 220px;
+  }
+  .facility-item {
+    margin-bottom: 25px !important;
+  }
+  .facility-title {
+    font-size: 1.05rem;
+    padding: 12px 15px !important;
+  }
+  .download-link {
+    font-size: 0.85rem;
+  }
+}
+

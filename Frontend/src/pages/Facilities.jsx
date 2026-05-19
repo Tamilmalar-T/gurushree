@@ -115,7 +115,7 @@ const Facilities = () => {
 
   return (
     <div className="facilities-page">
-      <div className="container py-5" style={{ marginTop: '100px' }}>
+      <div className="container py-5">
         <div className="row g-5">
           {/* Main Column: Our Facilities */}
           <div className="col-lg-12">

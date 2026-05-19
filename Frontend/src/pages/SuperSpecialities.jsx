@@ -130,7 +130,7 @@ const SuperSpecialities = () => {
 
   return (
     <div className=" specialities-page bg-light">
-      <div className="container py-5" style={{ marginTop: '100px' }}>
+      <div className="container py-5">
         <div className="text-center mb-5">
           <h1 className="fw-bold text-primary">Super-Specialities</h1>
           <p className="text-muted">Advanced and highly specialized medical care for complex conditions.</p>

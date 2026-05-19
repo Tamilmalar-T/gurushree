@@ -5,19 +5,39 @@
   background-size: cover;
   background-position: center;
 }
-.about-img-wrapper{
-    width: 400px;
-    height: 400px;
-    background-image: url('/hospital_bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+.about-img-wrapper {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  background-image: url('/hospital_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
 }
 
 .about-img-wrapper:hover {
   transform: scale(1.02);
+}
+
+@media (max-width: 991px) {
+  .about-page {
+    padding-top: 100px !important;
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page {
+    padding-top: 80px !important;
+    padding-bottom: 40px !important;
+  }
+  .about-img-wrapper {
+    max-width: 300px;
+  }
 }
 
 .vision-mission-icon {

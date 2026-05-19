@@ -41,7 +41,7 @@ const Team = () => {
 
   return (
     <div className="team-page bg-light pb-5">
-      <div className="container py-5" style={{ marginTop: '100px' }}>
+      <div className="container py-5">
         
         <div className="text-center mb-5">
           <h1 className="fw-bold text-primary display-5 mb-4">Our Medical Team</h1>

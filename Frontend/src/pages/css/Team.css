@@ -33,6 +33,36 @@
   background-color: #00a3c8;
 }
 
+.team-page {
+  margin-top: 100px;
+}
+
 .team-intro p {
   font-size: 1.1rem;
+}
+
+@media (max-width: 991.98px) {
+  .team-page {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-page {
+    margin-top: 60px;
+  }
+  
+  .team-intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .department-section {
+    padding: 20px !important;
+    margin-bottom: 25px !important;
+  }
+
+  .department-section h3 {
+    font-size: 1.3rem;
+  }
 }

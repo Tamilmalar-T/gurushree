@@ -1,5 +1,18 @@
 .contact-section {
   background: #f5fbfd;
+  margin-top: 100px;
+}
+
+@media (max-width: 991.98px) {
+  .contact-section {
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    margin-top: 60px;
+  }
 }
 
 .contact-subtitle {
