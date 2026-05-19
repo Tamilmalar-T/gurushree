@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <Header className="fixed-top w-100" style={{ zIndex: 1030, boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : 'none', transition: 'box-shadow 0.3s ease' }}>
+    <header className="fixed-top w-100" style={{ zIndex: 1030, boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : 'none', transition: 'box-shadow 0.3s ease' }}>
       {/* Top Bar */}
       <div className="d-none d-lg-block w-100" style={{ backgroundColor: '#005b70', color: 'white', padding: '10px 0', fontSize: '13px' }}>
         <div className="container">
@@ -95,6 +95,7 @@ const Header = () => {
                   <li><Link className="dropdown-item py-2" to="/super-specialities" onClick={collapseNav}>Super-Speciality</Link></li>
                   <li><Link className="dropdown-item py-2" to="/testing" onClick={collapseNav}>Testing</Link></li>
                   <li><Link className="dropdown-item py-2" to="/testing2" onClick={collapseNav}>Testing 2</Link></li>
+                  <li><Link className="dropdown-item py-2" to="/testing3" onClick={collapseNav}>Testing 3</Link></li>
                 </ul>
               </li>
               <li className="nav-item mx-2"><Link className="nav-link text-dark fw-medium" to="/contact" onClick={collapseNav}>Contact</Link></li>
@@ -108,7 +109,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </Header>
+    </header>
   );
 };
 

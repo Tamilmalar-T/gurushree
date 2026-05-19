@@ -10,9 +10,10 @@ import Specialities from './pages/Specialities.jsx'
 import SuperSpecialities from './pages/SuperSpecialities.jsx'
 import Contact from './pages/Contact.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
-import Header from './Header.jsx'
+import Header from './header.jsx'
 import Testing from './pages/testing.jsx'
 import Testing2 from './pages/Testing2.jsx'
+import Testing3 from './pages/Testing3.jsx'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/testing" element={<Testing/>} />
           <Route path="/testing2" element={<Testing2/>} />
+          <Route path="/testing3" element={<Testing3/>} />
         </Routes>
 
         <Footer />
