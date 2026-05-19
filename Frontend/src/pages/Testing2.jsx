@@ -11,7 +11,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/2873/2873099.png",
     bg: "linear-gradient(135deg, #10b981, #047857)",
     glowColor: "#10b981",
-    badgeText: "ANAESTHESIA",
+
     description: "Comprehensive pain management and critical care during surgical procedures, ensuring patient safety and comfort.",
   },
   {
@@ -21,7 +21,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/2966/2966486.png",
     bg: "linear-gradient(135deg, #ef4444, #b91c1c)",
     glowColor: "#ef4444",
-    badgeText: "EMERGENCY",
+
     description: "24/7 rapid response and life-saving treatments for critical injuries and sudden illnesses.",
   },
   {
@@ -31,7 +31,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/2823/2823525.png",
     bg: "linear-gradient(135deg, #0ea5e9, #0369a1)",
     glowColor: "#0ea5e9",
-    badgeText: "DENTAL",
+
     description: "Complete dental care including ICU supported Maxillofacial Surgery, Implant Procedures, Facial Surgeries, Cosmetic procedures, Orthodontic and Endodontic Treatments, Periodontal Surgery, and Tooth Whitening Procedures.",
     customContent: (
       <div className="w-100">
@@ -71,7 +71,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/4140/4140048.png",
     bg: "linear-gradient(135deg, #f43f5e, #be123c)",
     glowColor: "#f43f5e",
-    badgeText: "DERMATOLOGY",
+
     description: "Expert care for skin, hair, and nail disorders, including clinical and cosmetic treatments.",
   },
   {
@@ -122,7 +122,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/2765/2765890.png",
     bg: "linear-gradient(135deg, #8b5cf6, #5b21b6)",
     glowColor: "#8b5cf6",
-    badgeText: "SURGERY",
+
     description: "Minimally invasive and comprehensive surgical solutions for a wide range of medical conditions.",
   },
   {
@@ -132,7 +132,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/3774/3774299.png",
     bg: "linear-gradient(135deg, #3b82f6, #1d4ed8)",
     glowColor: "#3b82f6",
-    badgeText: "MEDICINE",
+
     description: "Holistic diagnosis and management of adult diseases, providing primary and specialty care.",
   },
   {
@@ -142,7 +142,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/4320/4320350.png",
     bg: "linear-gradient(135deg, #6366f1, #4338ca)",
     glowColor: "#6366f1",
-    badgeText: "LABORATORY",
+
     description: "State-of-the-art diagnostic testing and pathology services for accurate clinical assessments.",
   },
   {
@@ -152,7 +152,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/2966/2966327.png",
     bg: "linear-gradient(135deg, #14b8a6, #0f766e)",
     glowColor: "#14b8a6",
-    badgeText: "NEPHROLOGY",
+
     description: "Comprehensive kidney care including all forms of Dialysis (CRPT, Plasmapheresis / SLED) and Renal Biopsies.",
     customContent: (
       <div className="w-100">
@@ -176,7 +176,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/3050/3050047.png",
     bg: "linear-gradient(135deg, #ec4899, #be185d)",
     glowColor: "#ec4899",
-    badgeText: "OBG",
+
     description: "Dealing with Labor and women related problems. Both Outpatient and Inpatient services are offered. Specialized in Colposcopy, Epidural Analgesia, High risk pregnancy, Infertility, Minimally Invasive Surgery, and Vaginal Hysterectomy.",
     customContent: (
       <div className="w-100">
@@ -206,7 +206,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/3135/3135805.png",
     bg: "linear-gradient(135deg, #06b6d4, #0369a1)",
     glowColor: "#06b6d4",
-    badgeText: "OPHTHALMOLOGY",
+
     description: "Advanced eye care, vision correction, and surgical treatments for various optical conditions.",
   },
   {
@@ -216,7 +216,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/4320/4320359.png",
     bg: "linear-gradient(135deg, #f97316, #c2410c)",
     glowColor: "#f97316",
-    badgeText: "ORTHOPEDICS",
+
     description: "A contemporary well-equipped department offering 24-hour emergency services for Accidents and trauma. Specialized in Arthroscopy, Total Hip and Knee replacement, Spine Instrumentation, Sports injuries, and Pediatric deformity correction.",
     customContent: (
       <div className="w-100">
@@ -250,7 +250,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/3015/3015112.png",
     bg: "linear-gradient(135deg, #84cc16, #4d7c0f)",
     glowColor: "#84cc16",
-    badgeText: "PHYSIO",
+
     description: "Rehabilitation and physical therapy to restore movement, relieve pain, and improve physical function.",
   },
   {
@@ -260,7 +260,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/3050/3050012.png",
     bg: "linear-gradient(135deg, #64748b, #334155)",
     glowColor: "#64748b",
-    badgeText: "PSYCHIATRY",
+
     description: "Providing psychiatric services to both outpatients and inpatients. Offering various psychological techniques and therapies including Psychotherapy, Marital therapy, Family therapy, Alcohol detoxification, and Electro convulsive therapy.",
     customContent: (
       <div className="w-100">
@@ -296,7 +296,7 @@ const departments = [
     image: "https://cdn-icons-png.flaticon.com/512/4140/4140061.png",
     bg: "linear-gradient(135deg, #eab308, #a16207)",
     glowColor: "#eab308",
-    badgeText: "UROLOGY",
+
     description: "Specialized care for urinary tract conditions and male reproductive system disorders.",
   }
 ];
@@ -310,6 +310,23 @@ const Testing2 = () => {
   useEffect(() => {
     if (selectedDept) {
       window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Smoothly center the active circular thumbnail within the bottom horizontal track
+      setTimeout(() => {
+        if (carouselRef.current) {
+          const activeEl = carouselRef.current.querySelector(".thumb-circle-active");
+          if (activeEl) {
+            const track = carouselRef.current;
+            const activeOffset = activeEl.offsetLeft;
+            const activeWidth = activeEl.offsetWidth;
+            const trackWidth = track.offsetWidth;
+            track.scrollTo({
+              left: activeOffset - (trackWidth / 2) + (activeWidth / 2),
+              behavior: "smooth"
+            });
+          }
+        }
+      }, 100);
     }
   }, [selectedDept]);
 
@@ -353,12 +370,11 @@ const Testing2 = () => {
                 <div className="brand-icon-box">
                   <FaHeartbeat className="brand-logo-icon" />
                 </div>
+                <h1 className="glass-dept-title">{selectedDept.name}</h1>
 
 
-                <span className="brand-dept-tag">{selectedDept.badgeText}</span>
+
               </div>
-
-              <h1 className="glass-dept-title">{selectedDept.name}</h1>
               <p className="glass-dept-subtitle ">{selectedDept.subtitle}</p>
 
               <div className="glass-desc-wrapper custom-scrollbar">
@@ -456,9 +472,9 @@ const Testing2 = () => {
                   <img src={dept.image} alt={dept.name} />
                 </div>
                 <div className="card-info-wrap">
-                  <span className="dept-badge">{dept.badgeText}</span>
+
                   <h3>{dept.name}</h3>
-                  <p >{dept.subtitle}</p>
+
                 </div>
                 <div className="card-hover-arrow">
                   <span>Explore</span> <FaChevronRight />

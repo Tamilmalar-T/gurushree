@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", "Inter", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 /* Soft elegant light canvas with ambient lighting */
@@ -111,10 +113,10 @@
 /* Slider Track */
 .cards-slider-track {
   display: flex;
-  gap: 35px;
+  gap: 25px;
   overflow-x: auto;
   overflow-y: visible;
-  padding: 160px 20px 40px 20px;
+  padding: 110px 20px 30px 20px;
   /* Greatly increased top padding so popped images never clip on hover */
   scroll-behavior: smooth;
 }
@@ -124,11 +126,11 @@
 }
 
 .premium-dept-card {
-  min-width: 270px;
-  width: 280px;
-  height: 240px;
-  border-radius: 36px;
-  padding: 35px 25px 25px 25px;
+  min-width: 210px;
+  width: 220px;
+  height: 180px;
+  border-radius: 16px;
+  padding: 25px 15px 15px 15px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -137,15 +139,16 @@
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.25);
   overflow: visible;
+  align-items: center;
 }
 
 .card-img-pop {
   position: absolute;
-  top: -90px;
+  top: -60px;
   left: 50%;
   transform: translateX(-50%);
-  width: 165px;
-  height: 165px;
+  width: 115px;
+  height: 115px;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 5;
 }
@@ -154,17 +157,17 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.55));
+  filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.45));
 }
 
 .premium-dept-card:hover {
-  transform: translateY(-16px) scale(1.04);
+  transform: translateY(-12px) scale(1.04);
   border-color: rgba(255, 255, 255, 0.6);
   z-index: 10;
 }
 
 .premium-dept-card:hover .card-img-pop {
-  transform: translateX(-50%) scale(1.22) translateY(-12px);
+  transform: translateX(-50%) scale(1.18) translateY(-8px);
 }
 
 .card-info-wrap {
@@ -174,26 +177,20 @@
   text-align: center;
 }
 
-.dept-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(10px);
-  padding: 5px 15px;
-  border-radius: 25px;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
+
 
 .card-info-wrap h3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 800;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   line-height: 1.2;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 .card-info-wrap p {
@@ -201,6 +198,12 @@
   opacity: 0.9;
   font-weight: 500;
   margin-bottom: 10px;
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 .card-hover-arrow {
@@ -308,18 +311,17 @@
   -webkit-backdrop-filter: blur(50px);
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 46px;
-  padding: 50px 70px 80px 70px;
+  padding: 60px 70px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35), inset 0 0 40px rgba(255, 255, 255, 0.6);
   position: relative;
   overflow: visible;
-  min-height: 680px;
+  min-height: 600px;
   max-width: 1200px;
   margin: 35px auto 0 auto;
-  /* Gives a beautiful small breathing space on top */
-  left: -40px;
-  /* Keeps the right edge exactly where it was at 880px, extending ONLY the left side */
 }
 
 /* Absolute Floating Back Button inside Glass Box */
@@ -364,12 +366,11 @@
   color: white;
 }
 
-/* Left Column Info */
 .glass-content-col {
-  width: 100%;
+  flex: 1;
   height: 100%;
-  min-height: 580px;
-  padding-right: 180px;
+  min-height: auto;
+  padding-right: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -518,8 +519,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-top: auto;
-  /* Pushes the icons to the very bottom */
+  margin-top: 25px;
 }
 
 .thumbnails-track {
@@ -631,12 +631,15 @@
 
 /* Right Column: Absolutely Positioned Protruding Black Bowl matching reference */
 .glass-showcase-col {
-  position: absolute;
-  right: -130px;
-  top: 42%;
-  /* Moved slightly towards the top of the card */
-  transform: translateY(-50%);
+  position: relative;
+  right: auto;
+  top: auto;
+  transform: none;
   z-index: 15;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .premium-plate-container {
@@ -647,8 +650,8 @@
 }
 
 .black-protruding-bowl {
-  width: 340px;
-  height: 340px;
+  width: 270px;
+  height: 270px;
   border-radius: 50%;
   background: #060913;
   display: flex;
@@ -661,8 +664,8 @@
 }
 
 .bowl-inner-depth {
-  width: 260px;
-  height: 260px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: radial-gradient(circle, #192335, #060913);
   display: flex;
@@ -674,8 +677,8 @@
 
 .bowl-spinning-hero {
   position: absolute;
-  width: 190px;
-  height: 190px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.75));
   animation: heroCounterSpin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, floatingHeroSleek 6s ease-in-out infinite 0.8s;
@@ -866,34 +869,74 @@
 }
 
 @media (max-width: 768px) {
+  .glass-view-wrapper {
+    padding: 20px 0px;
+  }
+
   .overview-container {
-    padding: 40px 25px;
+    width: 100%;
+    padding: 30px 8px;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
   }
 
   .overview-title {
-    font-size: 34px;
+    font-size: 28px;
+    padding: 0 8px;
   }
 
   .search-wrapper {
     min-width: 100%;
+    padding: 0 8px;
   }
 
   .cards-slider-track {
-    gap: 25px;
-    padding: 85px 10px 30px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px 10px;
+    padding: 85px 0 30px 0;
+    overflow-x: visible;
   }
 
   .premium-dept-card {
-    min-width: 250px;
-    width: 260px;
-    height: 220px;
-    padding: 25px 20px;
+    min-width: 0;
+    width: 100%;
+    height: 140px;
+    padding: 15px 10px;
   }
 
   .card-img-pop {
-    top: -80px;
-    width: 150px;
-    height: 150px;
+    top: -30px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .card-img-pop img {
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    padding: 8px;
+  }
+
+  .card-info-wrap h3 {
+    font-size: 16px;
+  }
+
+  .card-info-wrap p {
+    font-size: 11px;
+  }
+
+  .slider-controls {
+    display: none;
+  }
+
+  .glass-thumbnail-wrapper {
+    display: none;
   }
 }
 
@@ -945,5 +988,100 @@
   .bowl-spinning-hero {
     width: 130px;
     height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overview-container {
+    padding: 25px 10px;
+    border-radius: 24px;
+  }
+
+  .overview-title {
+    font-size: 24px;
+  }
+
+  .overview-subtitle {
+    font-size: 13px;
+  }
+
+  .premium-search-input {
+    padding: 12px 20px 12px 45px;
+    font-size: 14px;
+  }
+
+  .search-icon {
+    left: 18px;
+  }
+
+  .cards-slider-track {
+    gap: 60px 10px;
+    padding: 65px 5px 20px 5px;
+  }
+
+  .premium-dept-card {
+    height: 130px;
+
+    padding: 15px 8px;
+    border-radius: 12px;
+  }
+
+  .card-img-pop {
+    top: -45px;
+    width: 85px;
+    height: 85px;
+  }
+
+  .card-info-wrap h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .card-info-wrap p {
+    font-size: 10px;
+  }
+
+
+
+  .glass-card-box {
+    padding: 40px 15px 30px 15px;
+    border-radius: 24px;
+  }
+
+  .glass-back-btn {
+    top: 15px;
+    left: 15px;
+    padding: 6px 14px;
+  }
+
+  .glass-back-btn .back-icon {
+    font-size: 12px;
+  }
+
+  .glass-dept-title {
+    font-size: 28px;
+  }
+
+  .glass-dept-subtitle {
+    font-size: 14px;
+  }
+
+  .glass-dept-desc {
+    font-size: 13px;
+  }
+
+  .black-protruding-bowl {
+    width: 220px;
+    height: 220px;
+  }
+
+  .bowl-inner-depth {
+    width: 170px;
+    height: 170px;
+  }
+
+  .bowl-spinning-hero {
+    width: 110px;
+    height: 110px;
   }
 }
