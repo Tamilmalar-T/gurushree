@@ -28,7 +28,7 @@ const departments = [
     id: 3,
     name: "Dentistry",
     subtitle: "Comprehensive Dental Care",
-    image: "https://cdn-icons-png.flaticon.com/512/2823/2823525.png",
+    image: "https://cdn-icons-png.flaticon.com/512/2818/2818366.png",
     bg: "linear-gradient(135deg, #0ea5e9, #0369a1)",
     glowColor: "#0ea5e9",
 
@@ -47,7 +47,7 @@ const departments = [
         </ul>
 
         <h5 className="fw-bold text-secondary text-uppercase mt-4 mb-3" style={{ fontSize: '1.1rem' }}>Tooth Whitening Procedures</h5>
-        <div className="row g-4">
+        <div className="row g-4 mb-4">
           <div className="col-sm-6 col-md-5">
             <div className="card border-light shadow-sm text-center p-2">
               <img src="../Image/bannerbg.jpg" alt="Tooth Whitening Before" className="img-fluid rounded mb-2" style={{ maxHeight: '150px', objectFit: 'cover', width: '100%', backgroundColor: '#f8f9fa' }} />
@@ -78,7 +78,7 @@ const departments = [
     id: 5,
     name: "ENT",
     subtitle: "Ear, Nose & Throat Care",
-    image: "https://cdn-icons-png.flaticon.com/512/3209/3209995.png",
+ image: "https://cdn-icons-png.flaticon.com/512/4140/4140037.png",
     bg: "linear-gradient(135deg, #f59e0b, #b45309)",
     glowColor: "#f59e0b",
     badgeText: "ENT",
@@ -119,7 +119,7 @@ const departments = [
     id: 6,
     name: "General Surgery",
     subtitle: "Minimally Invasive Care",
-    image: "https://cdn-icons-png.flaticon.com/512/2765/2765890.png",
+   image: "https://cdn-icons-png.flaticon.com/512/4320/4320337.png",
     bg: "linear-gradient(135deg, #8b5cf6, #5b21b6)",
     glowColor: "#8b5cf6",
 
@@ -149,7 +149,7 @@ const departments = [
     id: 9,
     name: "Nephrology",
     subtitle: "Comprehensive Kidney Care",
-    image: "https://cdn-icons-png.flaticon.com/512/2966/2966327.png",
+     image: "https://cdn-icons-png.flaticon.com/512/2966/2966327.png", // kidney
     bg: "linear-gradient(135deg, #14b8a6, #0f766e)",
     glowColor: "#14b8a6",
 
@@ -302,10 +302,55 @@ const departments = [
 ];
 
 const Testing2 = () => {
+  const deptDoctors = {
+    1: ["Dr. S.B. Gangadhar", "Dr. Manjunath Sarangi"],
+    3: ["Dr. Sugandh"],
+    4: ["Dr. Arathi", "Dr. Shettykere", "Dr. Srinivas"],
+    5: ["Dr. Hemraj"],
+    6: ["Dr. Giridhar", "Dr. Rudresh"],
+    7: ["Dr. Shankarlingaiah", "Dr. Niroop"],
+    8: ["Dr. Padmanna Negli"],
+    9: ["Dr. Shivaprasad", "Dr. Ashish"],
+    10: ["Dr. Chaya", "Dr. Vijayalakshmi", "Dr. Susheelamma", "Dr. Nethra Dinesh", "Dr. Sunanda", "Dr. Anitha"],
+    11: ["Dr. Nagabhushan", "Dr. Suresh"],
+    12: ["Dr. Manjunath B", "Dr. Janardhan S"],
+    13: ["Dr. Praveen"],
+    14: ["Dr. Madhukar", "Dr. Prasanth"],
+    15: ["Dr. Chandrashekar", "Dr. Nagarajaiah"]
+  };
+
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDept, setSelectedDept] = useState(null);
+  const [firstVisibleIdx, setFirstVisibleIdx] = useState(0);
   const sliderRef = useRef(null);
   const carouselRef = useRef(null);
+
+  const handleSliderScroll = () => {
+    if (sliderRef.current) {
+      const scrollLeft = sliderRef.current.scrollLeft;
+      const cardWidth = 245; // card (220px) + gap (25px)
+      const index = Math.round(scrollLeft / cardWidth);
+      setFirstVisibleIdx(index);
+    }
+  };
+
+  useEffect(() => {
+    const slider = sliderRef.current;
+    if (slider) {
+      slider.addEventListener("scroll", handleSliderScroll);
+      handleSliderScroll(); // Initial check
+      return () => {
+        slider.removeEventListener("scroll", handleSliderScroll);
+      };
+    }
+  }, [selectedDept, searchQuery]);
+
+  useEffect(() => {
+    setFirstVisibleIdx(0);
+    if (sliderRef.current) {
+      sliderRef.current.scrollLeft = 0;
+    }
+  }, [searchQuery]);
 
   useEffect(() => {
     if (selectedDept) {
@@ -337,13 +382,13 @@ const Testing2 = () => {
 
   const scrollPrev = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -320, behavior: "smooth" });
+      sliderRef.current.scrollBy({ left: -245, behavior: "smooth" });
     }
   };
 
   const scrollNext = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 320, behavior: "smooth" });
+      sliderRef.current.scrollBy({ left: 245, behavior: "smooth" });
     }
   };
 
@@ -384,6 +429,41 @@ const Testing2 = () => {
                   </div>
                 ) : (
                   <p className="glass-dept-desc">{selectedDept.description}</p>
+                )}
+
+                {deptDoctors[selectedDept.id] && deptDoctors[selectedDept.id].length > 0 && (
+                  <div className="mt-4 pt-2">
+                    <h5 className="fw-bold text-primary mb-3" style={{ fontSize: '1.1rem' }}>
+                      Our Specialist{deptDoctors[selectedDept.id].length > 1 ? 's' : ''}:
+                    </h5>
+                    <div className="row g-3">
+                      {deptDoctors[selectedDept.id].map((doctor, idx) => {
+                        const colors = ['0ea5e9', '8b5cf6', '10b981', 'f59e0b', 'ef4444'];
+                        const bgColor = colors[doctor.length % colors.length];
+                        return (
+                          <div key={idx} className="col-12 col-sm-6">
+                            <div className="d-flex align-items-center gap-3 bg-white p-3 rounded-4 shadow-sm border border-light h-100">
+                              <div className="rounded-circle overflow-hidden border border-2 border-primary" style={{ width: '55px', height: '55px', flexShrink: 0 }}>
+                                <img 
+                                  src={`../assets/doctors/${doctor.toLowerCase().replace(/[^a-z0-9]/g, '-')}.jpg`} 
+                                  alt={doctor} 
+                                  className="img-fluid w-100 h-100 object-fit-cover" 
+                                  onError={(e) => { 
+                                    e.target.onerror = null; 
+                                    e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(doctor.replace('Dr. ', ''))}&background=${bgColor}&color=fff&size=100&bold=true`;
+                                  }} 
+                                />
+                              </div>
+                              <div>
+                                <h6 className="fw-bold text-dark mb-1" style={{ fontSize: '0.95rem' }}>{doctor}</h6>
+                                <p className="text-muted small fw-medium mb-0">{selectedDept.name}</p>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
                 )}
               </div>
               {/* Bottom Horizontal Carousel Selector */}
@@ -486,14 +566,28 @@ const Testing2 = () => {
             )}
           </div>
 
-          <div className="slider-controls">
-            <button className="control-btn" onClick={scrollPrev}>
-              <FaChevronLeft className="me-2" /> Prev
-            </button>
-            <button className="control-btn" onClick={scrollNext}>
-              Next <FaChevronRight className="ms-2" />
-            </button>
-          </div>
+          {filteredDepartments.length > 0 && (
+            <div className="slider-controls">
+              <button 
+                className="control-btn" 
+                onClick={scrollPrev}
+                disabled={firstVisibleIdx === 0}
+                style={{ opacity: firstVisibleIdx === 0 ? 0.35 : 1, cursor: firstVisibleIdx === 0 ? 'default' : 'pointer' }}
+                title={firstVisibleIdx > 0 ? `Scroll to ${filteredDepartments[firstVisibleIdx - 1].name}` : ""}
+              >
+                <FaChevronLeft className="me-2" /> Prev {firstVisibleIdx > 0 ? `(${filteredDepartments[firstVisibleIdx - 1].name})` : ""}
+              </button>
+              <button 
+                className="control-btn" 
+                onClick={scrollNext}
+                disabled={firstVisibleIdx >= filteredDepartments.length - 1}
+                style={{ opacity: firstVisibleIdx >= filteredDepartments.length - 1 ? 0.35 : 1, cursor: firstVisibleIdx >= filteredDepartments.length - 1 ? 'default' : 'pointer' }}
+                title={firstVisibleIdx < filteredDepartments.length - 1 ? `Scroll to ${filteredDepartments[firstVisibleIdx + 1].name}` : ""}
+              >
+                {firstVisibleIdx < filteredDepartments.length - 1 ? `(${filteredDepartments[firstVisibleIdx + 1].name})` : ""} Next <FaChevronRight className="ms-2" />
+              </button>
+            </div>
+          )}
         </div>
       )}
     </div>

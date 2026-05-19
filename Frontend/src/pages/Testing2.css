@@ -20,9 +20,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 20px 80px 20px; /* Enhanced bottom padding for scroll space */
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* Allows natural scrolling without clipping the glass box */
 }
 
 /* =========================================================
@@ -47,9 +47,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* Lifts the search bar up to perfectly center with the title */
   margin-bottom: 20px;
-  /* Pushes the department cards further down */
   gap: 30px;
   flex-wrap: wrap;
 }
@@ -117,7 +115,6 @@
   overflow-x: auto;
   overflow-y: visible;
   padding: 110px 20px 30px 20px;
-  /* Greatly increased top padding so popped images never clip on hover */
   scroll-behavior: smooth;
 }
 
@@ -177,8 +174,6 @@
   text-align: center;
 }
 
-
-
 .card-info-wrap h3 {
   font-size: 18px;
   font-weight: 800;
@@ -186,7 +181,6 @@
   line-height: 1.2;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   display: -webkit-box;
-
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -199,7 +193,6 @@
   font-weight: 500;
   margin-bottom: 10px;
   display: -webkit-box;
-
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -270,7 +263,6 @@
   filter: blur(140px);
   border-radius: 50%;
   opacity: 0.3;
-  /* Softer opacity for light mode */
   z-index: -1;
   transition: background 1s ease, transform 3s ease;
   pointer-events: none;
@@ -297,30 +289,29 @@
     transform: scale(0.9) translate(0, 0);
     opacity: 0.45;
   }
-
   100% {
     transform: scale(1.1) translate(40px, -40px);
     opacity: 0.65;
   }
 }
 
-/* Main Glass Showcase Card - Optimized for laptop viewports */
+/* Main Glass Showcase Card - Optimized with proper alignment & max-width */
 .glass-card-box {
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px);
   border: 1px solid rgba(255, 255, 255, 0.75);
   border-radius: 46px;
-  padding: 60px 70px;
+  padding: 50px 60px; /* Highly balanced premium padding */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35), inset 0 0 40px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.25), inset 0 0 40px rgba(255, 255, 255, 0.6);
   position: relative;
   overflow: visible;
-  min-height: 600px;
-  max-width: 1200px;
+  min-height: 580px;
+  max-width: 1150px; /* Highly balanced width preventing extreme stretching */
   margin: 35px auto 0 auto;
 }
 
@@ -376,7 +367,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 5;
-  padding-top: 10px;
+  padding-top: 25px; /* Clean spacing below back button */
 }
 
 .glass-brand-head {
@@ -442,13 +433,12 @@
 }
 
 .glass-desc-wrapper {
-  max-height: 350px;
-  /* Greatly increased to fit new rich content */
+  max-height: 320px;
   overflow-y: auto;
   margin: 15px 0 25px 0;
-  padding-right: 15px;
+  padding-right: 20px; /* Clean breathing room for scrollbar */
   width: 100%;
-  /* Forces the scrollbar and content box all the way right near the image */
+  max-width: 680px; /* Aligns the scrollbar track beautifully next to the content list */
 }
 
 /* Custom slick scrollbar for the description */
@@ -476,10 +466,23 @@
   color: #334155;
   font-weight: 500;
   margin: 0;
-  max-width: 950px;
-  /* Allows text to flow all the way near the image */
   width: 100%;
   transition: all 0.3s ease;
+}
+
+/* Beautiful, robust left-aligned lists matching standard reading patterns */
+.glass-dept-desc ul,
+.glass-dept-desc ol {
+  list-style-position: outside !important;
+  text-align: left !important;
+  padding-left: 24px !important;
+  margin-left: 0 !important;
+}
+
+.glass-dept-desc li {
+  text-align: left !important;
+  padding-left: 4px !important;
+  margin-bottom: 8px;
 }
 
 .glass-action-box {
@@ -527,11 +530,11 @@
   gap: 14px;
   align-items: flex-end;
   max-width: 750px;
-  /* Fits roughly 10 icons */
   overflow-x: auto;
   padding: 25px 5px 15px 5px;
   scroll-behavior: smooth;
   width: 100%;
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
 }
 
 .thumbnails-track::-webkit-scrollbar {
@@ -553,7 +556,6 @@
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   flex-shrink: 0;
   z-index: 10;
-
 }
 
 .thumb-arrow-btn:hover {
@@ -561,7 +563,6 @@
   color: white;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
-
 }
 
 /* Inactive Thumbnail Circle */
@@ -602,7 +603,6 @@
   height: 68px;
   border-radius: 50%;
   background: #1e3a8a;
-  /* Dark Blue color */
   border: 3px solid #ffffff;
   display: flex;
   align-items: center;
@@ -650,8 +650,8 @@
 }
 
 .black-protruding-bowl {
-  width: 270px;
-  height: 270px;
+  width: 240px; /* Highly elegant, compact, perfectly sized bowl */
+  height: 240px;
   border-radius: 50%;
   background: #060913;
   display: flex;
@@ -664,8 +664,8 @@
 }
 
 .bowl-inner-depth {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   background: radial-gradient(circle, #192335, #060913);
   display: flex;
@@ -677,8 +677,8 @@
 
 .bowl-spinning-hero {
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 125px;
+  height: 125px;
   object-fit: contain;
   filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.75));
   animation: heroCounterSpin 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, floatingHeroSleek 6s ease-in-out infinite 0.8s;
@@ -690,7 +690,6 @@
     transform: rotate(270deg) scale(0.5);
     opacity: 0;
   }
-
   100% {
     transform: rotate(0deg) scale(1);
     opacity: 1;
@@ -702,12 +701,10 @@
     transform: rotate(-270deg) scale(0.2);
     opacity: 0;
   }
-
   80% {
     transform: rotate(15deg) scale(1.15);
     opacity: 1;
   }
-
   100% {
     transform: rotate(0deg) scale(1);
     opacity: 1;
@@ -715,12 +712,9 @@
 }
 
 @keyframes floatingHeroSleek {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0) scale(1);
   }
-
   50% {
     transform: translateY(-14px) scale(1.04);
   }
@@ -736,7 +730,6 @@
     opacity: 0;
     transform: scale(0.96) translateY(25px);
   }
-
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -752,7 +745,6 @@
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -778,18 +770,18 @@
   }
 
   .black-protruding-bowl {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 
   .bowl-inner-depth {
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
   }
 
   .bowl-spinning-hero {
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
   }
 
   .floating-service-tag {
@@ -818,12 +810,12 @@
   .glass-content-col {
     width: 100%;
     padding-right: 0;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .glass-dept-desc {
-    margin: 20px auto 35px auto;
+    margin: 20px 0 35px 0;
   }
 
   .glass-thumbnail-selector {
@@ -833,7 +825,6 @@
   .thumbnails-track {
     justify-content: center;
     flex-wrap: wrap;
-    /* On tablet/mobile, wrap beautifully if needed */
   }
 
   .glass-showcase-col {
@@ -848,27 +839,36 @@
   }
 
   .black-protruding-bowl {
-    width: 290px;
-    height: 290px;
+    width: 200px;
+    height: 200px;
   }
 
   .bowl-inner-depth {
-    width: 220px;
-    height: 220px;
-  }
-
-  .bowl-spinning-hero {
     width: 150px;
     height: 150px;
   }
 
+  .bowl-spinning-hero {
+    width: 100px;
+    height: 100px;
+  }
+
   .floating-service-tag {
     display: none;
-    /* Hide floating tags on tablet/mobile for clean layout */
   }
 }
 
 @media (max-width: 768px) {
+  .glass-showcase-col {
+    display: none !important;
+  }
+
+  .glass-desc-wrapper {
+    max-height: none !important;
+    overflow-y: visible !important;
+    padding-right: 0 !important;
+  }
+
   .glass-view-wrapper {
     padding: 20px 0px;
   }
@@ -967,7 +967,7 @@
 
   .glass-dept-desc {
     font-size: 14px;
-    margin: 18px auto 30px auto;
+    margin: 18px 0 30px 0;
   }
 
   .glass-order-btn {
@@ -976,18 +976,18 @@
   }
 
   .black-protruding-bowl {
-    width: 250px;
-    height: 250px;
-  }
-
-  .bowl-inner-depth {
     width: 190px;
     height: 190px;
   }
 
+  .bowl-inner-depth {
+    width: 140px;
+    height: 140px;
+  }
+
   .bowl-spinning-hero {
-    width: 130px;
-    height: 130px;
+    width: 95px;
+    height: 95px;
   }
 }
 
@@ -1021,7 +1021,6 @@
 
   .premium-dept-card {
     height: 130px;
-
     padding: 15px 8px;
     border-radius: 12px;
   }
@@ -1040,8 +1039,6 @@
   .card-info-wrap p {
     font-size: 10px;
   }
-
-
 
   .glass-card-box {
     padding: 40px 15px 30px 15px;
@@ -1071,17 +1068,17 @@
   }
 
   .black-protruding-bowl {
-    width: 220px;
-    height: 220px;
+    width: 160px;
+    height: 160px;
   }
 
   .bowl-inner-depth {
-    width: 170px;
-    height: 170px;
+    width: 120px;
+    height: 120px;
   }
 
   .bowl-spinning-hero {
-    width: 110px;
-    height: 110px;
+    width: 80px;
+    height: 80px;
   }
 }
