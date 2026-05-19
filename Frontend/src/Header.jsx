@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed-top w-100" style={{ zIndex: 1030, boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : 'none', transition: 'box-shadow 0.3s ease' }}>
+    <Header className="fixed-top w-100" style={{ zIndex: 1030, boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.1)' : 'none', transition: 'box-shadow 0.3s ease' }}>
       {/* Top Bar */}
       <div className="d-none d-lg-block w-100" style={{ backgroundColor: '#005b70', color: 'white', padding: '10px 0', fontSize: '13px' }}>
         <div className="container">
@@ -108,7 +108,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </header>
+    </Header>
   );
 };
 
