@@ -10,7 +10,7 @@ import Specialities from './pages/Specialities.jsx'
 import SuperSpecialities from './pages/SuperSpecialities.jsx'
 import Contact from './pages/Contact.jsx'
 import ScrollToTop from './ScrollToTop.jsx'
-import Header from './header.jsx'
+import Header from './Header.jsx'
 import Testing from './pages/testing.jsx'
 import Testing2 from './pages/Testing2.jsx'
 
