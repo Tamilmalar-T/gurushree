@@ -10,7 +10,7 @@ const About = ({ isHome }) => {
 
     <div className={`about-page ${isHome ? 'home-about-page' : ''}`}>
       <div className="container">
-        <div className="row align-items-center g-5">
+        <div className="row align-items-center g-md-5 g-4">
 
           {/* Left Side Image */}
           <div className="col-lg-5 d-flex justify-content-center">

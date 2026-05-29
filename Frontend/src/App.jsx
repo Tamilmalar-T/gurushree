@@ -20,7 +20,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', overflowX: 'hidden' }}>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

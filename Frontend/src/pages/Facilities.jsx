@@ -119,7 +119,7 @@ const Facilities = ({ isHome }) => {
 
       <div className="facilities-page">
         <div className={`container ${isHome ? 'py-2' : 'py-5'}`}>
-          <div className="row g-5">
+          <div className="row g-md-5 g-4">
             {/* Main Column: Our Facilities */}
             <div className="col-lg-12">
               <div className="section-header mb-4">
