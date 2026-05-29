@@ -67,7 +67,7 @@ const Home = () => {
                     </p>
 
                     <div className="d-flex flex-wrap gap-3 mt-4">
-                      <Link to="/facilities" className="btn rounded-1 px-5 py-3 text-white shadow-sm" style={{ backgroundColor: '#e0f6fb', color: '#00a3c8', fontWeight: '600', fontSize: '15px' }}>
+                      <Link to="/facilities" className="btn rounded-1 px-5 py-3 shadow-sm" style={{ backgroundColor: '#e0f6fb', color: '#00a3c8', fontWeight: '600', fontSize: '15px' }}>
                         Our Facilities
                       </Link>
                     </div>
@@ -92,7 +92,7 @@ const Home = () => {
                     </p>
 
                     <div className="d-flex flex-wrap gap-3 mt-4">
-                      <Link to="/contact" className="btn rounded-1 px-5 py-3 text-white shadow-sm" style={{ backgroundColor: '#e0f6fb', color: '#00a3c8', fontWeight: '600', fontSize: '15px' }}>
+                      <Link to="/contact" className="btn rounded-1 px-5 py-3 shadow-sm" style={{ backgroundColor: '#e0f6fb', color: '#00a3c8', fontWeight: '600', fontSize: '15px' }}>
                         Book Appointment
                       </Link>
                     </div>
